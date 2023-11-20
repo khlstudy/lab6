@@ -31,7 +31,6 @@ class Taxi
 {
     public event EventHandler Event2;
     public event EventHandler Event3;
-    public event EventHandler Event4;
 
     public void TaxiArrived(string address1)
     {
@@ -112,7 +111,7 @@ class Program
 
         client.Event4 += (sender, eventArgs) => {
             taxi.ArrivedAtDestination(client.Address2);
-            taxi.TaxiFree(); // Додано вивід "Таксі вільно" у класі Taxi
+            taxi.TaxiFree(); 
         };
 
         client.CallTaxi();
